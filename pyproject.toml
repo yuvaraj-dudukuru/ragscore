@@ -1,0 +1,32 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "unit: unit tests — exercise functions directly without HTTP",
+    "integration: integration tests — exercise HTTP endpoints with mocked services",
+    "e2e: end-to-end tests — simulate realistic multi-step user sessions",
+]
+
+[project]
+name = "ragscope"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.8"
+dependencies = [
+  "fastapi==0.135.3",
+  "uvicorn[standard]==0.41.0",
+  "python-multipart==0.0.26",
+  "langchain==1.2.15",
+  "langchain-community==0.4.1",
+  "langchain-chroma==1.1.0",
+  "langchain-ollama==1.1.0",
+  "mlflow==3.12.0",
+  "pypdf==6.10.1",
+  "httpx==0.28.1",
+  "ruff==0.15.12",
+  "langchain-text-splitters>=1.1.1",
+  "deepeval>=3.8.8",
+  "litellm>=1.81.16",
+  "python-dotenv>=1.2.1",
+]
